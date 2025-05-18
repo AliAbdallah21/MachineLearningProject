@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polish Real Estate Price Predictor</title>
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Polish Real Estate Price Predictor</h1>
+            <p class="lead">Predict real estate prices per square meter in Poland</p>
+        </header>
+
+        <main>
+            <% if (error) { %>
+                <div class="alert alert-danger" role="alert">
+                    <%= error %>
+                </div>
+            <% } %>
+
+            <% if (prediction) { %>
+                <div class="prediction-results">
+                    <h2>Prediction Results</h2>
+                    <div class="card">
+                        <div class="card-body">
+                            <% if (parseInt(prediction.date.split('/')[1]) > 2023) { %>
+                                <div class="alert alert-info" role="alert">
+                                    <strong>Future Prediction:</strong> This is a forecasted price based on historical trends and market projections.
+                                </div>
+                            <% } %>
+                            <h3 class="price">
+                                <%= prediction.price %> PLN/m²
+                            </h3>
+                            <p class="details">
+                                <strong>Voivodeship:</strong> <%= prediction.voivodeship %><br>
+                                <strong>Size category:</strong> <%= prediction.size %><br>
+                                <strong>Market type:</strong> <%= prediction.market %><br>
+                                <strong>Date:</strong> <%= prediction.date %>
+                            </p>
+
+                            <% if (prediction.economicFactors && (prediction.economicFactors.interestRate || prediction.economicFactors.inflation || prediction.economicFactors.gdp || prediction.economicFactors.unemployment || prediction.economicFactors.apartmentsSold)) { %>
+                                <div class="economic-factors mt-4">
+                                    <h4>Economic Indicators Used</h4>
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered table-sm">
+                                            <thead class="table-light">
+                                                <tr>
+                                                    <th>Indicator</th>
+                                                    <th>Value</th>
+                                                    <th>Impact on Price</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <% if (prediction.economicFactors.interestRate) { %>
+                                                <tr>
+                                                    <td>Interest Rate</td>
+                                                    <td><%= prediction.economicFactors.interestRate %>%</td>
+                                                    <td>
+                                                        <% if (parseFloat(prediction.economicFactors.interestRate) > 5) { %>
+                                                            <span class="text-danger">Negative ↓</span>
+                                                        <% } else if (parseFloat(prediction.economicFactors.interestRate) > 3) { %>
+                                                            <span class="text-warning">Neutral ↔</span>
+                                                        <% } else { %>
+                                                            <span class="text-success">Positive ↑</span>
+                                                        <% } %>
+                                                    </td>
+                                                </tr>
+                                                <% } %>
+
+                                                <% if (prediction.economicFactors.inflation) { %>
+                                                <tr>
+                                                    <td>Inflation Rate (vs. previous year)</td>
+                                                    <td><%= prediction.economicFactors.inflation %>%</td>
+                                                    <td>
+                                                        <% if (parseFloat(prediction.economicFactors.inflation) > 105) { %>
+                                                            <span class="text-warning">Mixed ↕</span>
+                                                        <% } else if (parseFloat(prediction.economicFactors.inflation) < 100) { %>
+                                                            <span class="text-danger">Negative ↓</span>
+                                                        <% } else { %>
+                                                            <span class="text-success">Positive ↑</span>
+                                                        <% } %>
+                                                    </td>
+                                                </tr>
+                                                <% } %>
+
+                                                <% if (prediction.economicFactors.gdp) { %>
+                                                <tr>
+                                                    <td>GDP Growth</td>
+                                                    <td><%= prediction.economicFactors.gdp %>%</td>
+                                                    <td>
+                                                        <% if (parseFloat(prediction.economicFactors.gdp) < 100) { %>
+                                                            <span class="text-danger">Negative ↓</span>
+                                                        <% } else if (parseFloat(prediction.economicFactors.gdp) < 102) { %>
+                                                            <span class="text-warning">Neutral ↔</span>
+                                                        <% } else { %>
+                                                            <span class="text-success">Positive ↑</span>
+                                                        <% } %>
+                                                    </td>
+                                                </tr>
+                                                <% } %>
+
+                                                <% if (prediction.economicFactors.unemployment) { %>
+                                                <tr>
+                                                    <td>Unemployment Rate</td>
+                                                    <td><%= prediction.economicFactors.unemployment %>%</td>
+                                                    <td>
+                                                        <% if (parseFloat(prediction.economicFactors.unemployment) > 10) { %>
+                                                            <span class="text-danger">Negative ↓</span>
+                                                        <% } else if (parseFloat(prediction.economicFactors.unemployment) > 7) { %>
+                                                            <span class="text-warning">Neutral ↔</span>
+                                                        <% } else { %>
+                                                            <span class="text-success">Positive ↑</span>
+                                                        <% } %>
+                                                    </td>
+                                                </tr>
+                                                <% } %>
+
+                                                <% if (prediction.economicFactors.apartmentsSold) { %>
+                                                <tr>
+                                                    <td>Estimated Apartments Sold</td>
+                                                    <td><%= prediction.economicFactors.apartmentsSold %> units</td>
+                                                    <td>
+                                                        <% if (parseInt(prediction.economicFactors.apartmentsSold) > 300) { %>
+                                                            <span class="text-success">High Demand</span>
+                                                        <% } else if (parseInt(prediction.economicFactors.apartmentsSold) > 100) { %>
+                                                            <span class="text-warning">Average Demand</span>
+                                                        <% } else { %>
+                                                            <span class="text-danger">Low Demand</span>
+                                                        <% } %>
+                                                    </td>
+                                                </tr>
+                                                <% } %>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            <% } %>
+
+                            <a href="/" class="btn btn-outline-primary mt-3">Make Another Prediction</a>
+                        </div>
+                    </div>
+                </div>
+            <% } else { %>
+                <div class="prediction-form">
+                    <h2>Enter Property Details</h2>
+                    <form action="/predict" method="POST">
+                        <div class="form-group mb-3">
+                            <label for="voivodeship">Voivodeship (Region)</label>
+                            <select class="form-control" id="voivodeship" name="voivodeship" required>
+                                <option value="" disabled <%= !formData.voivodeship ? 'selected' : '' %>>Select region</option>
+                                <optgroup label="Voivodeships">
+                                    <% voivodeships.slice(0, 16).forEach(voivodeship => { %>
+                                        <option value="<%= voivodeship %>" <%= formData.voivodeship === voivodeship ? 'selected' : '' %>><%= voivodeship %></option>
+                                    <% }) %>
+                                </optgroup>
+                                <optgroup label="Powiats">
+                                    <% voivodeships.slice(16).forEach(powiat => { %>
+                                        <option value="<%= powiat %>" <%= formData.voivodeship === powiat ? 'selected' : '' %>><%= powiat %></option>
+                                    <% }) %>
+                                </optgroup>
+                            </select>
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label>Apartment Size</label>
+                            <div class="size-options">
+                                <% sizeCategories.forEach(category => { %>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="sizeCategory" id="<%= category.id %>" 
+                                            value="<%= category.id %>" <%= formData.sizeCategory === category.id ? 'checked' : '' %>>
+                                        <label class="form-check-label" for="<%= category.id %>">
+                                            <%= category.label %> (<%= category.range %>)
+                                        </label>
+                                    </div>
+                                <% }) %>
+                            </div>
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label>Market Type</label>
+                            <div class="market-options">
+                                <% marketTypes.forEach(type => { %>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="marketType" id="<%= type.id %>" 
+                                            value="<%= type.value %>" <%= !formData.marketType && type.id === 'primary' ? 'checked' : formData.marketType === type.value ? 'checked' : '' %>>
+                                        <label class="form-check-label" for="<%= type.id %>">
+                                            <%= type.label %>
+                                        </label>
+                                    </div>
+                                <% }) %>
+                            </div>
+                            <small class="text-muted">Primary market refers to new constructions, while secondary market refers to resale properties.</small>
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label for="date">Date</label>
+                            <div class="row">
+                                <div class="col">
+                                    <select class="form-control" id="month" name="month" required>
+                                        <option value="" disabled <%= !formData.month ? 'selected' : '' %>>Month</option>
+                                        <% for (let m = 1; m <= 12; m++) { %>
+                                            <option value="<%= m %>" <%= formData.month === m.toString() ? 'selected' : '' %>>
+                                                <%= new Date(0, m - 1).toLocaleString('default', { month: 'long' }) %>
+                                            </option>
+                                        <% } %>
+                                    </select>
+                                </div>
+                                <div class="col">
+                                    <select class="form-control" id="year" name="year" required>
+                                        <option value="" disabled <%= !formData.year ? 'selected' : '' %>>Year</option>
+                                        <% for (let y = 2010; y <= 2023; y++) { %>
+                                            <option value="<%= y %>" <%= formData.year === y.toString() ? 'selected' : '' %>><%= y %></option>
+                                        <% } %>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Predict Price</button>
+                    </form>
+                </div>
+            <% } %>
+        </main>
+    </div>
+</body>
+</html>

@@ -1,0 +1,578 @@
+{
+  "2010_1": {
+    "year": 2010,
+    "quarter": 1,
+    "interest_rate": 3.5,
+    "inflation": 0.0,
+    "gdp_growth": 104.5,
+    "unemployment": 0.0,
+    "apartments_sold": 163.0
+  },
+  "2011_1": {
+    "year": 2011,
+    "quarter": 1,
+    "interest_rate": 3.69444444444444,
+    "inflation": 0.0,
+    "gdp_growth": 105.9,
+    "unemployment": 13.9333333333333,
+    "apartments_sold": 137.0
+  },
+  "2012_1": {
+    "year": 2012,
+    "quarter": 1,
+    "interest_rate": 4.5,
+    "inflation": 0.0,
+    "gdp_growth": 101.7,
+    "unemployment": 13.3666666666667,
+    "apartments_sold": 205.0
+  },
+  "2013_1": {
+    "year": 2013,
+    "quarter": 1,
+    "interest_rate": 3.75,
+    "inflation": 0.0,
+    "gdp_growth": 99.7,
+    "unemployment": 14.4666666666667,
+    "apartments_sold": 341.0
+  },
+  "2014_1": {
+    "year": 2014,
+    "quarter": 1,
+    "interest_rate": 2.5,
+    "inflation": 0.0,
+    "gdp_growth": 104.2,
+    "unemployment": 13.4666666666667,
+    "apartments_sold": 265.0
+  },
+  "2015_1": {
+    "year": 2015,
+    "quarter": 1,
+    "interest_rate": 1.85555555555556,
+    "inflation": 0.0,
+    "gdp_growth": 103.9,
+    "unemployment": 10.8,
+    "apartments_sold": 292.0
+  },
+  "2016_1": {
+    "year": 2016,
+    "quarter": 1,
+    "interest_rate": 1.5,
+    "inflation": 99.4,
+    "gdp_growth": 102.2,
+    "unemployment": 8.9,
+    "apartments_sold": 547.0
+  },
+  "2017_1": {
+    "year": 2017,
+    "quarter": 1,
+    "interest_rate": 1.5,
+    "inflation": 101.3,
+    "gdp_growth": 104.9,
+    "unemployment": 7.33333333333333,
+    "apartments_sold": 338.0
+  },
+  "2018_1": {
+    "year": 2018,
+    "quarter": 1,
+    "interest_rate": 1.5,
+    "inflation": 101.6,
+    "gdp_growth": 105.2,
+    "unemployment": 5.86666666666667,
+    "apartments_sold": 409.0
+  },
+  "2019_1": {
+    "year": 2019,
+    "quarter": 1,
+    "interest_rate": 1.5,
+    "inflation": 99.9,
+    "gdp_growth": 104.3,
+    "unemployment": 5.36666666666667,
+    "apartments_sold": 437.0
+  },
+  "2020_1": {
+    "year": 2020,
+    "quarter": 1,
+    "interest_rate": 1.42857142857143,
+    "inflation": 105.0,
+    "gdp_growth": 98.2,
+    "unemployment": 4.86666666666667,
+    "apartments_sold": 588.0
+  },
+  "2021_1": {
+    "year": 2021,
+    "quarter": 1,
+    "interest_rate": 0.1,
+    "inflation": 105.4,
+    "gdp_growth": 108.8,
+    "unemployment": 5.83333333333333,
+    "apartments_sold": 595.0
+  },
+  "2022_1": {
+    "year": 2022,
+    "quarter": 1,
+    "interest_rate": 2.68333333333333,
+    "inflation": 112.7,
+    "gdp_growth": 101.3,
+    "unemployment": 4.96666666666667,
+    "apartments_sold": 615.0
+  },
+  "2023_1": {
+    "year": 2023,
+    "quarter": 1,
+    "interest_rate": 6.75,
+    "inflation": 118.7,
+    "gdp_growth": 99.1,
+    "unemployment": 4.76666666666667,
+    "apartments_sold": 521.0
+  },
+  "2024_1": {
+    "year": 2024,
+    "quarter": 1,
+    "interest_rate": 5.75,
+    "inflation": 101.8,
+    "gdp_growth": 0.0,
+    "unemployment": 0.0,
+    "apartments_sold": 0.0
+  },
+  "2025_1": {
+    "year": 2025,
+    "quarter": 1,
+    "interest_rate": 5.75,
+    "inflation": 0.0,
+    "gdp_growth": 0.0,
+    "unemployment": 0.0,
+    "apartments_sold": 0.0
+  },
+  "2010_2": {
+    "year": 2010,
+    "quarter": 2,
+    "interest_rate": 3.5,
+    "inflation": 0.0,
+    "gdp_growth": 104.5,
+    "unemployment": 0.0,
+    "apartments_sold": 90.0
+  },
+  "2011_2": {
+    "year": 2011,
+    "quarter": 2,
+    "interest_rate": 4.17582417582418,
+    "inflation": 0.0,
+    "gdp_growth": 105.9,
+    "unemployment": 12.7,
+    "apartments_sold": 153.0
+  },
+  "2012_2": {
+    "year": 2012,
+    "quarter": 2,
+    "interest_rate": 4.64010989010989,
+    "inflation": 0.0,
+    "gdp_growth": 101.7,
+    "unemployment": 12.7,
+    "apartments_sold": 177.0
+  },
+  "2013_2": {
+    "year": 2013,
+    "quarter": 2,
+    "interest_rate": 3.04120879120879,
+    "inflation": 0.0,
+    "gdp_growth": 99.7,
+    "unemployment": 13.6666666666667,
+    "apartments_sold": 337.0
+  },
+  "2014_2": {
+    "year": 2014,
+    "quarter": 2,
+    "interest_rate": 2.5,
+    "inflation": 0.0,
+    "gdp_growth": 104.2,
+    "unemployment": 12.1333333333333,
+    "apartments_sold": 216.0
+  },
+  "2015_2": {
+    "year": 2015,
+    "quarter": 2,
+    "interest_rate": 1.5,
+    "inflation": 0.0,
+    "gdp_growth": 103.9,
+    "unemployment": 9.7,
+    "apartments_sold": 332.0
+  },
+  "2016_2": {
+    "year": 2016,
+    "quarter": 2,
+    "interest_rate": 1.5,
+    "inflation": 99.1,
+    "gdp_growth": 102.2,
+    "unemployment": 8.03333333333333,
+    "apartments_sold": 468.0
+  },
+  "2017_2": {
+    "year": 2017,
+    "quarter": 2,
+    "interest_rate": 1.5,
+    "inflation": 101.7,
+    "gdp_growth": 104.9,
+    "unemployment": 6.53333333333333,
+    "apartments_sold": 677.0
+  },
+  "2018_2": {
+    "year": 2018,
+    "quarter": 2,
+    "interest_rate": 1.5,
+    "inflation": 101.4,
+    "gdp_growth": 105.2,
+    "unemployment": 5.4,
+    "apartments_sold": 341.0
+  },
+  "2019_2": {
+    "year": 2019,
+    "quarter": 2,
+    "interest_rate": 1.5,
+    "inflation": 101.3,
+    "gdp_growth": 104.3,
+    "unemployment": 4.9,
+    "apartments_sold": 587.0
+  },
+  "2020_2": {
+    "year": 2020,
+    "quarter": 2,
+    "interest_rate": 0.408791208791209,
+    "inflation": 105.8,
+    "gdp_growth": 98.2,
+    "unemployment": 5.4,
+    "apartments_sold": 277.0
+  },
+  "2021_2": {
+    "year": 2021,
+    "quarter": 2,
+    "interest_rate": 0.1,
+    "inflation": 105.0,
+    "gdp_growth": 108.8,
+    "unemployment": 5.56666666666667,
+    "apartments_sold": 608.0
+  },
+  "2022_2": {
+    "year": 2022,
+    "quarter": 2,
+    "interest_rate": 5.04945054945055,
+    "inflation": 116.9,
+    "gdp_growth": 101.3,
+    "unemployment": 4.66666666666667,
+    "apartments_sold": 633.0
+  },
+  "2023_2": {
+    "year": 2023,
+    "quarter": 2,
+    "interest_rate": 6.75,
+    "inflation": 115.5,
+    "gdp_growth": 99.1,
+    "unemployment": 4.5,
+    "apartments_sold": 754.0
+  },
+  "2024_2": {
+    "year": 2024,
+    "quarter": 2,
+    "interest_rate": 5.75,
+    "inflation": 101.2,
+    "gdp_growth": 0.0,
+    "unemployment": 0.0,
+    "apartments_sold": 0.0
+  },
+  "2025_2": {
+    "year": 2025,
+    "quarter": 2,
+    "interest_rate": 5.75,
+    "inflation": 0.0,
+    "gdp_growth": 0.0,
+    "unemployment": 0.0,
+    "apartments_sold": 0.0
+  },
+  "2010_3": {
+    "year": 2010,
+    "quarter": 3,
+    "interest_rate": 3.5,
+    "inflation": 0.0,
+    "gdp_growth": 104.5,
+    "unemployment": 0.0,
+    "apartments_sold": 149.0
+  },
+  "2011_3": {
+    "year": 2011,
+    "quarter": 3,
+    "interest_rate": 4.5,
+    "inflation": 0.0,
+    "gdp_growth": 105.9,
+    "unemployment": 11.9666666666667,
+    "apartments_sold": 133.0
+  },
+  "2012_3": {
+    "year": 2012,
+    "quarter": 3,
+    "interest_rate": 4.75,
+    "inflation": 0.0,
+    "gdp_growth": 101.7,
+    "unemployment": 12.4,
+    "apartments_sold": 208.0
+  },
+  "2013_3": {
+    "year": 2013,
+    "quarter": 3,
+    "interest_rate": 2.51086956521739,
+    "inflation": 0.0,
+    "gdp_growth": 99.7,
+    "unemployment": 12.9,
+    "apartments_sold": 324.0
+  },
+  "2014_3": {
+    "year": 2014,
+    "quarter": 3,
+    "interest_rate": 2.5,
+    "inflation": 0.0,
+    "gdp_growth": 104.2,
+    "unemployment": 11.1666666666667,
+    "apartments_sold": 303.0
+  },
+  "2015_3": {
+    "year": 2015,
+    "quarter": 3,
+    "interest_rate": 1.5,
+    "inflation": 0.0,
+    "gdp_growth": 103.9,
+    "unemployment": 8.8,
+    "apartments_sold": 290.0
+  },
+  "2016_3": {
+    "year": 2016,
+    "quarter": 3,
+    "interest_rate": 1.5,
+    "inflation": 99.4,
+    "gdp_growth": 102.2,
+    "unemployment": 7.4,
+    "apartments_sold": 349.0
+  },
+  "2017_3": {
+    "year": 2017,
+    "quarter": 3,
+    "interest_rate": 1.5,
+    "inflation": 101.9,
+    "gdp_growth": 104.9,
+    "unemployment": 6.16666666666667,
+    "apartments_sold": 425.0
+  },
+  "2018_3": {
+    "year": 2018,
+    "quarter": 3,
+    "interest_rate": 1.5,
+    "inflation": 101.6,
+    "gdp_growth": 105.2,
+    "unemployment": 5.1,
+    "apartments_sold": 348.0
+  },
+  "2019_3": {
+    "year": 2019,
+    "quarter": 3,
+    "interest_rate": 1.5,
+    "inflation": 101.6,
+    "gdp_growth": 104.3,
+    "unemployment": 4.66666666666667,
+    "apartments_sold": 322.0
+  },
+  "2020_3": {
+    "year": 2020,
+    "quarter": 3,
+    "interest_rate": 0.1,
+    "inflation": 105.5,
+    "gdp_growth": 98.2,
+    "unemployment": 5.66666666666667,
+    "apartments_sold": 143.0
+  },
+  "2021_3": {
+    "year": 2021,
+    "quarter": 3,
+    "interest_rate": 0.1,
+    "inflation": 105.7,
+    "gdp_growth": 108.8,
+    "unemployment": 5.16666666666667,
+    "apartments_sold": 602.0
+  },
+  "2022_3": {
+    "year": 2022,
+    "quarter": 3,
+    "interest_rate": 6.51630434782609,
+    "inflation": 121.7,
+    "gdp_growth": 101.3,
+    "unemployment": 4.5,
+    "apartments_sold": 721.0
+  },
+  "2023_3": {
+    "year": 2023,
+    "quarter": 3,
+    "interest_rate": 6.5625,
+    "inflation": 111.2,
+    "gdp_growth": 99.1,
+    "unemployment": 4.4,
+    "apartments_sold": 713.0
+  },
+  "2024_3": {
+    "year": 2024,
+    "quarter": 3,
+    "interest_rate": 5.75,
+    "inflation": 106.7,
+    "gdp_growth": 0.0,
+    "unemployment": 0.0,
+    "apartments_sold": 0.0
+  },
+  "2025_3": {
+    "year": 2025,
+    "quarter": 3,
+    "interest_rate": 5.75,
+    "inflation": 0.0,
+    "gdp_growth": 0.0,
+    "unemployment": 0.0,
+    "apartments_sold": 0.0
+  },
+  "2010_4": {
+    "year": 2010,
+    "quarter": 4,
+    "interest_rate": 3.5,
+    "inflation": 0.0,
+    "gdp_growth": 104.5,
+    "unemployment": 0.0,
+    "apartments_sold": 222.0
+  },
+  "2011_4": {
+    "year": 2011,
+    "quarter": 4,
+    "interest_rate": 4.5,
+    "inflation": 0.0,
+    "gdp_growth": 105.9,
+    "unemployment": 12.2,
+    "apartments_sold": 208.0
+  },
+  "2012_4": {
+    "year": 2012,
+    "quarter": 4,
+    "interest_rate": 4.53804347826087,
+    "inflation": 0.0,
+    "gdp_growth": 101.7,
+    "unemployment": 13.0333333333333,
+    "apartments_sold": 142.0
+  },
+  "2013_4": {
+    "year": 2013,
+    "quarter": 4,
+    "interest_rate": 2.5,
+    "inflation": 0.0,
+    "gdp_growth": 99.7,
+    "unemployment": 12.9666666666667,
+    "apartments_sold": 375.0
+  },
+  "2014_4": {
+    "year": 2014,
+    "quarter": 4,
+    "interest_rate": 2.04891304347826,
+    "inflation": 0.0,
+    "gdp_growth": 104.2,
+    "unemployment": 10.5333333333333,
+    "apartments_sold": 316.0
+  },
+  "2015_4": {
+    "year": 2015,
+    "quarter": 4,
+    "interest_rate": 1.5,
+    "inflation": 0.0,
+    "gdp_growth": 103.9,
+    "unemployment": 8.5,
+    "apartments_sold": 219.0
+  },
+  "2016_4": {
+    "year": 2016,
+    "quarter": 4,
+    "interest_rate": 1.5,
+    "inflation": 99.7,
+    "gdp_growth": 102.2,
+    "unemployment": 7.2,
+    "apartments_sold": 203.0
+  },
+  "2017_4": {
+    "year": 2017,
+    "quarter": 4,
+    "interest_rate": 1.5,
+    "inflation": 102.2,
+    "gdp_growth": 104.9,
+    "unemployment": 5.7,
+    "apartments_sold": 241.0
+  },
+  "2018_4": {
+    "year": 2018,
+    "quarter": 4,
+    "interest_rate": 1.5,
+    "inflation": 101.5,
+    "gdp_growth": 105.2,
+    "unemployment": 5.1,
+    "apartments_sold": 444.0
+  },
+  "2019_4": {
+    "year": 2019,
+    "quarter": 4,
+    "interest_rate": 1.5,
+    "inflation": 102.0,
+    "gdp_growth": 104.3,
+    "unemployment": 4.53333333333333,
+    "apartments_sold": 242.0
+  },
+  "2020_4": {
+    "year": 2020,
+    "quarter": 4,
+    "interest_rate": 0.1,
+    "inflation": 105.6,
+    "gdp_growth": 98.2,
+    "unemployment": 5.53333333333333,
+    "apartments_sold": 107.0
+  },
+  "2021_4": {
+    "year": 2021,
+    "quarter": 4,
+    "interest_rate": 1.05380434782609,
+    "inflation": 108.8,
+    "gdp_growth": 108.8,
+    "unemployment": 4.86666666666667,
+    "apartments_sold": 1265.0
+  },
+  "2022_4": {
+    "year": 2022,
+    "quarter": 4,
+    "interest_rate": 6.75,
+    "inflation": 121.1,
+    "gdp_growth": 101.3,
+    "unemployment": 4.43333333333333,
+    "apartments_sold": 642.0
+  },
+  "2023_4": {
+    "year": 2023,
+    "quarter": 4,
+    "interest_rate": 5.76358695652174,
+    "inflation": 108.1,
+    "gdp_growth": 99.1,
+    "unemployment": 4.36666666666667,
+    "apartments_sold": 853.0
+  },
+  "2024_4": {
+    "year": 2024,
+    "quarter": 4,
+    "interest_rate": 5.75,
+    "inflation": 107.0,
+    "gdp_growth": 0.0,
+    "unemployment": 0.0,
+    "apartments_sold": 0.0
+  },
+  "2025_4": {
+    "year": 2025,
+    "quarter": 4,
+    "interest_rate": 5.75,
+    "inflation": 0.0,
+    "gdp_growth": 0.0,
+    "unemployment": 0.0,
+    "apartments_sold": 0.0
+  }
+}
