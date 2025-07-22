@@ -1,101 +1,121 @@
-# Polish Real Estate Price Predictor
+# 📈 Polish Real Estate Price Predictor
 
-A machine learning application that predicts real estate prices per square meter in Poland based on region, size, time period, and market type with economic indicator analysis.
+A robust machine learning application designed to predict real estate prices per square meter in Poland. This system leverages an **XGBoost model** and integrates key **economic indicators** to provide accurate, data-driven insights.
 
-## Description
+## ✨ Overview
 
-This application uses an XGBoost machine learning model with 92% accuracy to predict real estate prices in Poland. It takes into account:
+This application offers a comprehensive solution for analyzing and forecasting real estate values across various regions in Poland. It provides predictions based on property characteristics and relevant economic factors, making it a valuable tool for investors, real estate professionals, and market analysts.
 
-- Region (voivodeship or powiat)
-- Property size (small, medium, large, or extra large)
-- Time period (year and quarter)
-- Market type (primary or secondary)
-- Economic indicators (interest rates, inflation, GDP growth, unemployment, apartments sold)
+## 🚀 Features
 
-## Features
+* **Precise Price Prediction:** Predicts square meter prices for all Polish regions (voivodeships or powiats) with a high accuracy of 92%.
+* **Multi-faceted Property Analysis:** Incorporates property size (small, medium, large, extra large), time period (year and quarter), and market type (primary or secondary) into predictions.
+* **Economic Indicator Integration:** Analyzes the impact of crucial macroeconomic factors, including:
+    * **Interest Rates:** Directly influences mortgage affordability and market demand.
+    * **Inflation:** Reflects year-over-year price changes and purchasing power.
+    * **GDP Growth:** Indicates overall economic health and investment climate.
+    * **Unemployment Rate:** Reflects job market stability and consumer confidence.
+    * **Apartments Sold:** A direct indicator of market demand and liquidity.
+* **Historical Data & Forecasting:** Utilizes historical data from 2010 onwards, enabling both retrospective analysis and future price forecasting.
+* **Interactive Web Interface:** Provides an intuitive web-based form for easy input and clear display of prediction results, economic context, and impact analysis.
 
-- Predict square meter prices for all Polish regions
-- View economic factors affecting the prediction
-- Analyze the impact of each economic indicator
-- Support for both primary and secondary markets
-- Historical data from 2010 and forecasting capabilities
+## 🛠️ Technical Details
 
-## Installation
+### Machine Learning Model
 
-1. Clone the repository:
-```bash
-git clone https://github.com/AliAbdallah21/MachineLearningProject.git
-cd MachineLearningProject
+* **Model Type:** XGBoost Regression Model, chosen for its high performance and robustness in handling tabular data.
+* **Training:** Trained on extensive historical Polish real estate data.
+* **Features:** Integrates region, size category, market type, time period, and dynamic economic indicators.
+* **Accuracy:** Achieves 92% accuracy on test data, ensuring reliable predictions.
 
-2. Install dependencies:
-npm install
+### Prediction Workflow
 
-3. Make sure Python is installed with the required packages:
-pip install pandas numpy scikit-learn xgboost joblib
+1.  **User Input:** Users provide property details and desired time period via the web interface.
+2.  **Data Retrieval:** The system retrieves relevant economic indicators for the specified time period from its database.
+3.  **Preprocessing:** User inputs and economic data are validated and transformed using pre-trained `scikit-learn` preprocessor and scaler objects.
+4.  **Prediction:** The preprocessed features are fed into the loaded XGBoost model to generate the price per square meter prediction.
+5.  **Output:** Results are displayed, including the predicted price, the economic indicators used, and an assessment of each indicator's impact on the final prediction.
 
+## 📂 Project Structure
 
-Required Files
-Ensure the following model files are in the /models directory:
+.
+├── backend/
+│   └── views/             # EJS templates for the frontend UI
+├── models/
+│   ├── real_estate_model.json   # Primary XGBoost model (JSON format)
+│   ├── real_estate_model.pkl    # XGBoost model (pickle format - backup)
+│   ├── preprocessor.pkl         # Scikit-learn preprocessor object
+│   ├── scaler.pkl               # Scikit-learn scaler object
+│   └── economic_indicators.json # Database of historical economic indicators
+├── public/
+│   └── assets/            # CSS styles and static assets
+├── index.js               # Main Express.js server application
+└── predict.py             # Python script handling ML model loading and predictions
 
-real_estate_model.json (XGBoost model in JSON format)
-real_estate_model.pkl (XGBoost model in pickle format - backup)
-preprocessor.pkl (Sklearn preprocessor)
-scaler.pkl (Sklearn scaler)
-economic_indicators.json (Economic indicators database)
+## ⚙️ Installation & Setup
 
+To get this application running on your local machine, follow these steps:
 
-Usage:
-1. Start the application: 
-node index.js
+1.  **Clone the repository:**
+    ```bash
+    git clone [https://github.com/AliAbdallah21/MachineLearningProject.git](https://github.com/AliAbdallah21/MachineLearningProject.git)
+    cd MachineLearningProject
+    ```
 
-2. Open your browser and navigate to:
-http://localhost:3001
+2.  **Install Node.js dependencies (for the web server):**
+    ```bash
+    npm install
+    ```
 
-3. Fill in the prediction form with:
-Select a Polish region (voivodeship or powiat)
-Choose a property size category
-Select the time period (month and year)
-Choose the market type (primary or secondary)
+3.  **Install Python dependencies (for the ML backend):**
+    Ensure you have Python installed (preferably Python 3.8+).
+    ```bash
+    pip install pandas numpy scikit-learn xgboost joblib
+    ```
 
-4. Click "Calculate Price" to get your prediction
-Prediction Output
-The application provides:
+4.  **Verify Model Files:**
+    Ensure the following pre-trained model and data files are present in the `/models` directory. These are essential for the application's functionality and should be included in the repository.
+    * `real_estate_model.json`
+    * `real_estate_model.pkl`
+    * `preprocessor.pkl`
+    * `scaler.pkl`
+    * `economic_indicators.json`
 
-Predicted price per square meter in PLN
-Economic indicators used in the calculation
-Impact assessment of each economic indicator on the price
-Option to make another prediction
+## ▶️ Usage
 
-Project Structure
-/backend/views/ - EJS templates for the frontend
-/models/ - ML model files and economic indicators data
-/public/assets/ - CSS styles and static assets
-index.js - Express server and main application
-predict.py - Python script that handles ML predictions
+1.  **Start the application server:**
+    ```bash
+    node index.js
+    ```
+    The server will typically start on `http://localhost:3001`.
 
-Technical Details
-Machine Learning Model
-Uses XGBoost regression model trained on historical Polish real estate data
-Features include region, size category, market type, and time period
-Integrates with economic indicators for the specified time period
-Model accuracy: 92% on test data
+2.  **Open your web browser** and navigate to:
+    ```
+    http://localhost:3001
+    ```
 
-Economic Indicators
-Interest rates: Impact on mortgage affordability
-Inflation: Year-over-year price changes
-GDP growth: Overall economic health
-Unemployment rate: Job market stability
-Apartments sold: Market demand indicator
+3.  **Fill in the prediction form** with the desired details:
+    * Select a Polish region (voivodeship or powiat).
+    * Choose a property size category.
+    * Select the time period (month and year).
+    * Choose the market type (primary or secondary).
 
-Prediction Workflow
-1. User inputs are validated and preprocessed
-2. The system retrieves relevant economic indicators
-3. Features are transformed using stored preprocessor and scaler
-4. XGBoost model generates the price prediction
-5. Results are displayed with economic context and impact analysis
+4.  **Click "Calculate Price"** to receive your prediction.
 
-License
-MIT
+### Prediction Output
 
-Author
-Ali Abdallah
+The application will display:
+* The predicted price per square meter in PLN.
+* The economic indicators used in the calculation for the selected period.
+* An impact assessment for each economic indicator on the final price.
+* An option to make another prediction.
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/AliAbdallah21/MachineLearningProject/blob/main/LICENSE) file for details.
+
+## ✍️ Author
+
+**Ali Abdallah**
+* **Email:** [aliabdalla2110@gmail.com](mailto:aliabdalla2110@gmail.com)
+* **GitHub:** [AliAbdallah21](https://github.com/AliAbdallah21)
